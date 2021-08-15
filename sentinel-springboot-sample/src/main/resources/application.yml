@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sentinel-sample #application name 用于在sentinel-dashboard上显示
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 10.105.22.110:9000 #为application指明受管控的dashboard
+        clientIP: 10.105.22.69 #sentinel-dashboard与application间的心跳通信IP
+        port: 8719 #sentinel-board与application间的心跳通信IP
+      eager: true #设置为true sentinel-board可主动捕获application
